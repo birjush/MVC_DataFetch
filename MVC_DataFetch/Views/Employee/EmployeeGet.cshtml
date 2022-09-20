@@ -1,0 +1,45 @@
+﻿@using MVC_DataFetch.Models
+@model List<TBLEmployee>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EmployeeGet</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>
+                id_pk
+            </th>
+            <th>
+                employeeId
+            </th>
+            <th>
+                name
+            </th>
+            <th>
+                city
+            </th>
+            <th>
+                dateofbirthdateofbirth
+            </th>
+        </tr>
+        @foreach (TBLEmployee a in Model)
+        {
+            <tr>
+                <td>@a.id_pk</td>
+                <td>@a.employeeId</td>
+                <td>@a.name</td>
+                <td>@a.city</td>
+                <td>@a.dateofbirth</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
