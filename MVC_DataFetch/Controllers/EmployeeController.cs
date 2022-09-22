@@ -15,6 +15,19 @@ namespace MVC_DataFetch.Controllers
             List<TBLEmployee> employees = context.TBLEmployees.ToList();
             return View("EmployeeGet", employees);
         }
+        
+        public ActionResult insert()
+        {
+            return View("insert");
+        }
+
+        public ActionResult insertdata(TBLEmployee e)
+        {
+            context.TBLEmployees.Add(e);
+            context.SaveChanges();
+
+            return RedirectToAction("GetAllEmployees");
+        }
 
     }
 }
