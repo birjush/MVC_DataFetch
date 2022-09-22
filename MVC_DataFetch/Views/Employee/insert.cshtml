@@ -1,0 +1,30 @@
+﻿@using MVC_DataFetch.Models
+@model TBLEmployee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>insert</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("insertdata", "employee", FormMethod.Post))
+        {
+            <label>Employee ID</label>
+            @Html.TextBoxFor(a=>a.employeeId)
+            <label>Employee name</label>
+            @Html.TextBoxFor(a=>a.name)
+            <label>Employee city</label>
+            @Html.TextBoxFor(a=>a.city)
+            <label>Employee birthdate</label>
+            @Html.TextBoxFor(a=>a.dateofbirth)
+            <input type="submit" />
+        }
+    </div>
+</body>
+</html>
